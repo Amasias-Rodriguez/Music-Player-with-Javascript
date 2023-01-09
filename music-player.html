@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="music-player.css">
-    <link rel="stylesheet" href="/js/music-player.js" defer>
     <title>Music Player with Javascript</title>
 </head>
 <body>
@@ -31,13 +30,14 @@
         </section>
 
         <!-- song list -->
-        <ul class="songs">
-            <li><a href="">Song 1</a></li>
-            <li><a href="">Song 2</a></li>
-            <li><a href="">Song 3</a></li>
+        <ul class="songs" id="songs">
+            <!-- <li><a href="">Song 1</a></li>
+            <li><a class="active" href="">Song 2</a></li>
+            <li><a href="">Song 3</a></li> -->
         </ul>
     </main>
 
     <script src="https://kit.fontawesome.com/0defe727fb.js" crossorigin="anonymous"></script>
+    <script src="/js/music-player.js"></script>
 </body>
 </html>
