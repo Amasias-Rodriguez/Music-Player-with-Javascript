@@ -1,26 +1,29 @@
 const songList = [
     {
-        title: "Al Rojo Vivo",
+        title: "Al Rojo Vivo - Charlie Cardona",
         file: "alrojovivo.mp3",
         cover: "music.png"
     },
     {
-        title: "Alcoba",
+        title: "Alcoba - Grupo Raices",
         file: "alcobaraices.mp3",
         cover: "music.png"
     },
     {
-        title: "Alejate de mi ",
+        title: "Alejate de mi - Frankie Ruiz ",
         file: "alejatedemi.mp3",
         cover: "music.png"
     }
 ]
+
+let actualSong = null
 
 // Capturar elementos del dom 
 
 const songs = document.getElementById('songs')
 const audio = document.getElementById('audio')
 const cover = document.getElementById('cover')
+const title = document.getElementById('title')
 // Cargar canciones y mostrar listado
 
 function loadSongs(){
@@ -43,10 +46,27 @@ function loadSongs(){
 
 // Cargar cancion seleccionada
 function loadSong(songIndex){
-    audio.src = "./audio/" + songList[songIndex].file
-    audio.play()
+    if (songIndex === actualSong){
+        changeActiveClass()
+        actualSong = songIndex
+        audio.src = "./audio/" + songList[songIndex].file
+        audio.play()
+        changeCover(songIndex)
+        
+    }
+}
 
+function changeActiveClass(){
+    const links = document.querySelectorAll('a')
+    links[actualSong].classList.remove('active')
+}
+
+function changeCover(songIndex){
     cover.src = "./img/" + songList[songIndex].cover
+}
+
+function changeSongTitle(songIndex){
+    title.innerText = songList[songIndex].title
 }
 
 // Go!
