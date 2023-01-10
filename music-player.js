@@ -18,8 +18,9 @@ const songList = [
 
 // Capturar elementos del dom 
 
-const songs = document.getElementById('#songs')
-
+const songs = document.getElementById('songs')
+const audio = document.getElementById('audio')
+const cover = document.getElementById('cover')
 // Cargar canciones y mostrar listado
 
 function loadSongs(){
@@ -41,9 +42,11 @@ function loadSongs(){
 }
 
 // Cargar cancion seleccionada
-function loadSongs(songIndex){
-    console.log(songIndex)
+function loadSong(songIndex){
+    audio.src = "./audio/" + songList[songIndex].file
+    audio.play()
 
+    cover.src = "./img/" + songList[songIndex].cover
 }
 
 // Go!
