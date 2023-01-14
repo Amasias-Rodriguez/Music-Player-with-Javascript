@@ -47,7 +47,7 @@ function loadSongs(){
 // Cargar cancion seleccionada
 function loadSong(songIndex){
     if (songIndex === actualSong){
-        changeActiveClass()
+        changeActiveClass(actualSong, songIndex)
         actualSong = songIndex
         audio.src = "./audio/" + songList[songIndex].file
         audio.play()
@@ -56,9 +56,12 @@ function loadSong(songIndex){
     }
 }
 
-function changeActiveClass(){
+function changeActiveClass(lastIndex, newIndex){
     const links = document.querySelectorAll('a')
-    links[actualSong].classList.remove('active')
+    if (lastIndex === null){
+        links[lastIndex].classList.remove('active')
+    }
+    links[newIndex].classList.add('active')
 }
 
 function changeCover(songIndex){
