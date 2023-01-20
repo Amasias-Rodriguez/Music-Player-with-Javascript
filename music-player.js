@@ -104,14 +104,17 @@ function changeSongTitle(songIndex){
 }
 
 function prevSong(){
-    actualSong--
-    playSong()
-    
+    if (actual === null){
+        actualSong--
+        playSong()
+    } 
 }
 
 function nextSong(){
-    actualSong--
-    pauseSong()
+    if (actual === null){
+        actualSong++
+        playSong()
+    }
 }
 
 // Go!
