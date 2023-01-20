@@ -111,7 +111,7 @@ function prevSong(){
 
 function nextSong(){
     actualSong--
-    playSong()
+    pauseSong()
 }
 
 // Go!
