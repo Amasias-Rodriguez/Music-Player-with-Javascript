@@ -1,94 +1,58 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
-    height: 100%;
-}
-
-body{
-    font-family: sans-serif;
-    background-color: lightgray;
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #333;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-/* Player */
-
-.player{
-    min-width: 320px;
-    background-image: linear-gradient(black, gray);
-    border-radius: 1rem;
-    padding: 2rem;
-    color: white;
-    box-shadow: 2px 2px 3px black;
-}
-
-/* Title */
-
-.title{
-    margin-top: 0;
+.music-player{
+    background: #ffe0e5;
+    width: 400px;
+    padding: 25px 35px;
     text-align: center;
 }
-/* Cover */
 
-.cover{
-    height: auto;
-    border: 0.3rem;
-    display: block;
-    margin: 0 auto;
-}
-/* Progress */
-
-.progress-container{
-    height: 0.6rem;
-    background-color: lightgray;
-    margin-bottom: 1rem;
-}
-
-.progress{
-    background-color: yellow;
-    width: 40%;
-    height: 100%;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-/* Controls */
-
-.controls{
+nav{
     display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 1rem;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-.controls button{
-    background-color: transparent;
-    border: none;
+nav .circle{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    color: #f53192;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.22);
 }
 
-.controls i{
-    font-size: 1.7rem;
-    color: #fff;
-}
-/* Songs */
-
-.songs{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.song-img{
+    width: 220px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
 }
 
-.songs li{
-    margin-bottom: 1rem;
-}
-.songs a{
-    color: gray;
-    text-decoration: none;
+.music-player h1{
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    margin-top: 20px;
 }
 
-.songs a.active{
-    color: white;
-    font-weight: bold;
+.music-player p{
+    font-size: 14px;
+    color: #333;
 }
