@@ -19,3 +19,16 @@ function playPause(){
         ctrlIcon.classList.remove("play-circle-outline");
     }
 }
+
+if(song.play()){
+    setInterval(()=>{
+        progress.value = song.currentTime;
+    },500);
+}
+
+progress.onchange = function(){
+    song.play();
+    song.currentTime = progress.value;
+    ctrlIcon.classList.add("pause-outline");
+    ctrlIcon.classList.remove("play-circle-outline");
+}
