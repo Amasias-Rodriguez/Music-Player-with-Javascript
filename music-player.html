@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="music-player.css">
+    <link rel="stylesheet" href="music.css">
     <title>Music Player with Javascript</title>
 </head>
 <body>
-   <div class="container">
+    <div class="container">
         <div class="music-player">
             <nav>
                 <div class="circle">
@@ -25,12 +25,19 @@
             <audio controls>
                 <source src="/audio/Déjala - Tito Gómez (Letra).mp3" type="audio/mpeg">
             </audio>
+            <input type="range" value="0" id="progress">
+
+            <div class="controls" id="song">
+                <div><ion-icon name="play-back-circle-outline"></ion-icon></div>
+                <div onclick="playPause()"><ion-icon name="play-circle-outline" id="ctrlIcon"></ion-icon></div>
+                <div><ion-icon name="play-forward-circle-outline"></ion-icon></div>
+            </div>
         </div>
     </div>
 
 
     <script src="/js/music.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script src="/js/music-player.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
